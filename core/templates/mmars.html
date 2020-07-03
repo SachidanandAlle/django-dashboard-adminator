@@ -1,0 +1,70 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Datatable {% endblock title %}
+
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <div class="container-fluid">
+        <h4 class="c-grey-900 mT-10 mB-30">Medical Model Archives (MMAR)</h4>
+        <h5 align="right">[<a href="#">Import New</a>]</h5>
+        <div class="row">
+        <div class="col-md-12">
+            <div class="bgc-white bd bdrs-3 p-20 mB-20">
+
+            <table id="dataTable" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Source</th>
+                        <th>Version</th>
+                        <th>Last Updated</th>
+                        <th>Action</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in mmars %}
+                    <tr>
+                        <th scope="row">{{ forloop.counter }}</th>
+                        <td>{{ item.name }}</td>
+                        <td>{% if item.ngc_path %}
+                            {{ 'NGC' }}
+                            {% else %}
+                                {{ '' }}
+                            {% endif %}
+                        <td>{{ item.version }}</td>
+                        <td>{{ item.updated_at }}</td>
+                        <td>
+                            <div class="dropdown">
+                                <button style="font-size: smaller" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Action
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Reload</a>
+                                    <a class="dropdown-item" href="#">Cleanup</a>
+                                    {% if not item.ngc_path %}
+                                    <a class="dropdown-item" href="#">Delete</a>
+                                    {% endif %}
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Download Model</a>
+                                    <a class="dropdown-item" href="#">Download ALL</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Export to AIAA</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Ready To Download</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            </div>
+        </div>
+        </div>
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,85 @@
+- model: app.mmar
+  fields:
+    name: clara_ct_seg_spleen_amp
+    ngc_path: https://api.ngc.nvidia.com/v2/models/nvidia/med/clara_ct_seg_spleen_amp
+    version: 1
+- model: app.mmar
+  fields:
+    name: clara_ct_seg_spleen_no_amp
+    ngc_path: https://api.ngc.nvidia.com/v2/models/nvidia/med/clara_ct_seg_spleen_no_amp
+    version: 1
+- model: app.mmar
+  fields:
+    name: clara_ct_seg_liver_and_tumor_amp
+    ngc_path: https://api.ngc.nvidia.com/v2/models/nvidia/med/clara_ct_seg_liver_and_tumor_amp
+    version: 1
+- model: app.mmar
+  fields:
+    name: clara_ct_seg_liver_and_tumor_no_amp
+    ngc_path: https://api.ngc.nvidia.com/v2/models/nvidia/med/clara_ct_seg_liver_and_tumor_no_amp
+    version: 1
+- model: app.mmar
+  fields:
+    name: clara_mri_seg_brain_tumors_br16_full_amp
+    ngc_path: https://api.ngc.nvidia.com/v2/models/nvidia/med/clara_mri_seg_brain_tumors_br16_full_amp
+    version: 1
+- model: app.mmar
+  fields:
+    name: clara_mri_seg_brain_tumors_br16_full_no_amp
+    ngc_path: https://api.ngc.nvidia.com/v2/models/nvidia/med/clara_mri_seg_brain_tumors_br16_full_no_amp
+    version: 1
+- model: app.mmar
+  fields:
+    name: clara_xray_classification_chest_amp
+    ngc_path: https://api.ngc.nvidia.com/v2/models/nvidia/med/clara_xray_classification_chest_amp
+    version: 1
+- model: app.mmar
+  fields:
+    name: clara_xray_classification_chest_no_amp
+    ngc_path: https://api.ngc.nvidia.com/v2/models/nvidia/med/clara_xray_classification_chest_no_amp
+    version: 1
+- model: app.mmar
+  fields:
+    name: clara_mri_annotation_brain_tumors_t1ce_tc_amp
+    ngc_path: https://api.ngc.nvidia.com/v2/models/nvidia/med/clara_mri_annotation_brain_tumors_t1ce_tc_amp
+    version: 1
+- model: app.mmar
+  fields:
+    name: clara_mri_annotation_brain_tumors_t1ce_tc_no_amp
+    ngc_path: https://api.ngc.nvidia.com/v2/models/nvidia/med/clara_mri_annotation_brain_tumors_t1ce_tc_no_amp
+    version: 1
+- model: app.mmar
+  fields:
+    name: clara_ct_annotation_spleen_amp
+    ngc_path: https://api.ngc.nvidia.com/v2/models/nvidia/med/clara_ct_annotation_spleen_amp
+    version: 1
+- model: app.mmar
+  fields:
+    name: clara_ct_annotation_spleen_no_amp
+    ngc_path: https://api.ngc.nvidia.com/v2/models/nvidia/med/clara_ct_annotation_spleen_no_amp
+    version: 1
+- model: app.mmar
+  fields:
+    name: clara_mri_fed_learning_seg_brain_tumors_br16_t1c2tc_amp
+    ngc_path: https://api.ngc.nvidia.com/v2/models/nvidia/med/clara_mri_fed_learning_seg_brain_tumors_br16_t1c2tc_amp
+    version: 1
+- model: app.mmar
+  fields:
+    name: clara_mri_fed_learning_seg_brain_tumors_br16_t1c2tc_no_amp
+    ngc_path: https://api.ngc.nvidia.com/v2/models/nvidia/med/clara_mri_fed_learning_seg_brain_tumors_br16_t1c2tc_no_amp
+    version: 1
+- model: app.mmar
+  fields:
+    name: clara_mri_seg_brain_tumors_br16_t1c2tc_amp
+    ngc_path: https://api.ngc.nvidia.com/v2/models/nvidia/med/clara_mri_seg_brain_tumors_br16_t1c2tc_amp
+    version: 1
+- model: app.mmar
+  fields:
+    name: clara_mri_seg_brain_tumors_br16_t1c2tc_no_amp
+    ngc_path: https://api.ngc.nvidia.com/v2/models/nvidia/med/clara_mri_seg_brain_tumors_br16_t1c2tc_no_amp
+    version: 1
+- model: app.mmar
+  fields:
+    name: clara_train_automl_mri_prostate_cg_and_pz
+    ngc_path: https://api.ngc.nvidia.com/v2/models/nvidia/med/clara_train_automl_mri_prostate_cg_and_pz
+    version: 1

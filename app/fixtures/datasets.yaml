@@ -1,0 +1,50 @@
+- model: app.dataset
+  fields:
+    name: MSD_Task01_BrainTumour
+    path: 1A2IU8Sgea1h3fYLpYtFb2v7NYdMjvEhU
+    is_gdrive: True
+- model: app.dataset
+  fields:
+    name: MSD_Task02_Heart
+    path: 1wEB2I6S6tQBVEPxir8cA5kFB8gTQadYY
+    is_gdrive: True
+- model: app.dataset
+  fields:
+    name: MSD_Task03_Liver
+    path: 1jyVGUGyxKBXV6_9ivuZapQS8eUJXCIpu
+    is_gdrive: True
+- model: app.dataset
+  fields:
+    name: MSD_Task04_Hippcampus
+    path: 1RzPB1_bqzQhlWvU-YGvZzhx2omcDh38C
+    is_gdrive: True
+- model: app.dataset
+  fields:
+    name: MSD_Task05_Prostate
+    path: 1Ff7c21UksxyT4JfETjaarmuKEjdqe1-a
+    is_gdrive: True
+- model: app.dataset
+  fields:
+    name: MSD_Task06_Lung
+    path: 1I1LR7XjyEZ-VBQ-Xruh31V7xExMjlVvi
+    is_gdrive: True
+- model: app.dataset
+  fields:
+    name: MSD_Task07_Pancreas
+    path: 1YZQFSonulXuagMIfbJkZeTFJ6qEUuUxL
+    is_gdrive: True
+- model: app.dataset
+  fields:
+    name: MSD_Task08_HepaticVessel
+    path: 1qVrpV7vmhIsUxFiH189LmAn0ALbAPrgS
+    is_gdrive: True
+- model: app.dataset
+  fields:
+    name: MSD_Task09_Spleen
+    path: 1jzeNU1EKnK81PyTsrx0ujfNl-t0Jo8uE
+    is_gdrive: True
+- model: app.dataset
+  fields:
+    name: MSD_Task10_Colon
+    path: 1m7tMpE9qEcQGQjL_BdMD-Mvgmc44hG1Y
+    is_gdrive: True
