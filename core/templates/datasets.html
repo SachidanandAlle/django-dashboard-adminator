@@ -8,7 +8,10 @@
 
     <div class="container-fluid">
         <h4 class="c-grey-900 mT-10 mB-30">Datasets</h4>
-        <h5 align="right">[<a href="#">Import New</a>]</h5>
+        <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Import new MMAR">
+            Import
+        </button>
+
         <div class="row">
         <div class="col-md-12">
             <div class="bgc-white bd bdrs-3 p-20 mB-20">
@@ -28,9 +31,9 @@
                     {% for item in datasets %}
                     <tr>
                         <th scope="row">{{ forloop.counter }}</th>
-                        <td><a href="https://drive.google.com/file/d/{{ item.path }}/view?usp=sharing" target="_blank">{{ item.name }}</a></td>
+                        <td><a href="/dataset.html?name={{ item.name }}">{{ item.name }}</a></td>
                         <td>{% if item.is_gdrive %}
-                            {{ 'G-DRIVE' }}
+                                <a href='https://drive.google.com/file/d/{{ item.path }}/view?usp=sharing' target='_blank'>G-DRIVE</a>
                             {% else %}
                                 {{ '' }}
                             {% endif %}

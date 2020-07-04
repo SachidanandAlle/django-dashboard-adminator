@@ -1,0 +1,118 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Compose {% endblock title %}
+
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <div class="full-container">
+        <div class="email-app">
+        <div class="email-side-nav remain-height ov-h">
+        <div class="h-100 layers">
+            <div class="p-20 bgc-grey-100 layer w-100">
+                <a href="#" class="btn btn-danger btn-block">{{request.GET.name}}</a>
+            </div>
+            <div class="scrollable pos-r bdT layer w-100 fxg-1">
+                <div class="text-right mrg-top-30">
+                    <a href="#"><i class="c-green-500 ti-back-right"></i>
+                    <span>back</span></a>
+                </div>
+            <ul class="p-20 nav flex-column">
+                <li class="nav-item">
+                <a href="javascript:void(0)" class="nav-link c-grey-800 cH-blue-500 actived">
+                    <div class="peers ai-c jc-sb">
+                    <div class="peer peer-greed">
+                        <i class="c-orange-500 ti-folder"></i>
+                        <span>commands</span>
+                    </div>
+                    </div>
+                </a>
+                </li>
+                <li class="nav-item">
+                <a href="" class="nav-link c-grey-800 cH-blue-500">
+                    <div class="peers ai-c jc-sb">
+                    <div class="peer peer-greed">
+                        <i class="c-orange-500 ti-folder"></i>
+                        <span>config</span>
+                    </div>
+                    </div>
+                </a>
+                </li>
+                <li class="nav-item">
+                <a href="" class="nav-link c-grey-800 cH-blue-500">
+                    <div class="peers ai-c jc-sb">
+                    <div class="peer peer-greed">
+                        <i class="c-orange-500 ti-folder"></i>
+                        <span>lib</span>
+                    </div>
+                    </div>
+                </a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        </div>
+        <div class="email-wrapper row remain-height pos-r scrollable bgc-white">
+        <div class="email-content open no-inbox-view">
+            <div class="email-compose">
+            <div class="d-n@md+ p-20">
+                <a class="email-side-toggle c-grey-900 cH-blue-500 td-n" href="javascript:void(0)">
+                <i class="ti-menu"></i>
+                </a>
+            </div>
+            <form class="email-compose-body">
+                <h4 class="c-grey-900 mB-20">Preview/Edit</h4>
+                <div class="form-group">
+                    <input class="form-control" placeholder="Filename" value="transforms.py">
+                </div>
+
+                <div class="form-group">
+                   <div id="editor" style="height: 400px; font-size: medium">import numpy as np
+
+# note the ai4med here
+from ai4med.common.medical_image import MedicalImage
+from ai4med.common.transform_ctx import TransformContext
+from ai4med.components.transforms.transformer import Transformer
+
+class FilterProbabilityThreshold(Transformer):
+    def __init__(self, label_field='model', threshold=0.5):
+        Transformer.__init__(self)
+        self._label_field = label_field
+        self._threshold = threshold
+
+    def transform(self, transform_ctx: TransformContext):
+        label = transform_ctx.get_image(self._label_field)
+        result = (np.squeeze(label.get_data()) > self._threshold).astype(np.uint8)
+
+        m = label.new_image(result, label.get_shape_format())
+        transform_ctx.set_image(self._label_field, m)
+        return transform_ctx
+                   </div>
+                </div>
+                <div class="text-right mrg-top-30">
+                <button class="btn btn-primary">Save</button>
+                </div>
+            </form>
+            </div>
+        </div>
+        </div>
+        </div>
+    </div>
+
+    <script>
+        $( document ).ready(function() {
+            var editor = ace.edit("editor");
+            editor.setTheme("ace/theme/tomorrow_night_eighties");
+            editor.session.setMode("ace/mode/python");
+            editor.session.setTabSize(2);
+            //editor.session.setUseSoftTabs(false);
+
+            //formatted = JSON.stringify(JSON.parse(editor.session.getValue()), null, 2);
+            //editor.session.setValue(formatted);
+
+            //editor.session.setValue(js_beautify(editor.session.getValue(), {indent_size : 2}));
+            //ace.require("ace/ext/beautify").beautify(editor.session);
+        });
+    </script>
+{% endblock content %}

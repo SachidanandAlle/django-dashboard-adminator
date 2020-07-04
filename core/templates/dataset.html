@@ -1,0 +1,107 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Compose {% endblock title %}
+
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <div class="full-container">
+        <div class="email-app">
+        <div class="email-side-nav remain-height ov-h">
+        <div class="h-100 layers">
+            <div class="p-20 bgc-grey-100 layer w-100">
+                <a href="#" class="btn btn-danger btn-block">MSD_Task01_BrainTumour</a>
+            </div>
+            <div class="scrollable pos-r bdT layer w-100 fxg-1">
+            <ul class="p-20 nav flex-column">
+                <li class="nav-item">
+                <a href="javascript:void(0)" class="nav-link c-grey-800 cH-blue-500 actived">
+                    <div class="peers ai-c jc-sb">
+                    <div class="peer peer-greed">
+                        <i class="c-orange-500 ti-folder"></i>
+                        <span>imagesTr</span>
+                    </div>
+                    </div>
+                </a>
+                </li>
+                <li class="nav-item">
+                <a href="" class="nav-link c-grey-800 cH-blue-500">
+                    <div class="peers ai-c jc-sb">
+                    <div class="peer peer-greed">
+                        <i class="c-orange-500 ti-folder"></i>
+                        <span>imagesTs</span>
+                    </div>
+                    </div>
+                </a>
+                </li>
+                <li class="nav-item">
+                <a href="" class="nav-link c-grey-800 cH-blue-500">
+                    <div class="peers ai-c jc-sb">
+                    <div class="peer peer-greed">
+                        <i class="c-orange-500 ti-folder"></i>
+                        <span>labelsTr</span>
+                    </div>
+                    </div>
+                </a>
+                </li>
+                <li class="nav-item">
+                <a href="" class="nav-link c-grey-800 cH-blue-500">
+                    <div class="peers ai-c jc-sb">
+                    <div class="peer peer-greed">
+                        <i class="c-light-blue-500 ti-file"></i>
+                        <span>dataset.json</span>
+                    </div>
+                    </div>
+                </a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        </div>
+        <div class="email-wrapper row remain-height pos-r scrollable bgc-white">
+        <div class="email-content open no-inbox-view">
+            <div class="email-compose">
+            <div class="d-n@md+ p-20">
+                <a class="email-side-toggle c-grey-900 cH-blue-500 td-n" href="javascript:void(0)">
+                <i class="ti-menu"></i>
+                </a>
+            </div>
+            <form class="email-compose-body">
+                <h4 class="c-grey-900 mB-20">Preview/Edit</h4>
+                <div class="form-group">
+                    <input class="form-control" placeholder="Filename" value="dataset.json">
+                </div>
+
+                <div class="form-group">
+                   <div id="editor" style="height: 600px; font-size: medium">
+                       {"name":"Spleen","description":"Spleen Segmentation","reference":"Memorial Sloan Kettering Cancer Center","licence":"CC-BY-SA 4.0","release":"1.0 06/08/2018","tensorImageSize":"3D","modality":{"0":"CT"},"labels":{"0":"background","1":"spleen"},"numTraining":41,"numTest":20,"training":[{"image":"./imagesTr/spleen_19.nii.gz","label":"./labelsTr/spleen_19.nii.gz"},{"image":"./imagesTr/spleen_31.nii.gz","label":"./labelsTr/spleen_31.nii.gz"},{"image":"./imagesTr/spleen_52.nii.gz","label":"./labelsTr/spleen_52.nii.gz"},{"image":"./imagesTr/spleen_40.nii.gz","label":"./labelsTr/spleen_40.nii.gz"},{"image":"./imagesTr/spleen_3.nii.gz","label":"./labelsTr/spleen_3.nii.gz"},{"image":"./imagesTr/spleen_17.nii.gz","label":"./labelsTr/spleen_17.nii.gz"},{"image":"./imagesTr/spleen_21.nii.gz","label":"./labelsTr/spleen_21.nii.gz"},{"image":"./imagesTr/spleen_33.nii.gz","label":"./labelsTr/spleen_33.nii.gz"},{"image":"./imagesTr/spleen_9.nii.gz","label":"./labelsTr/spleen_9.nii.gz"},{"image":"./imagesTr/spleen_29.nii.gz","label":"./labelsTr/spleen_29.nii.gz"},{"image":"./imagesTr/spleen_46.nii.gz","label":"./labelsTr/spleen_46.nii.gz"},{"image":"./imagesTr/spleen_25.nii.gz","label":"./labelsTr/spleen_25.nii.gz"},{"image":"./imagesTr/spleen_13.nii.gz","label":"./labelsTr/spleen_13.nii.gz"},{"image":"./imagesTr/spleen_62.nii.gz","label":"./labelsTr/spleen_62.nii.gz"},{"image":"./imagesTr/spleen_27.nii.gz","label":"./labelsTr/spleen_27.nii.gz"},{"image":"./imagesTr/spleen_44.nii.gz","label":"./labelsTr/spleen_44.nii.gz"},{"image":"./imagesTr/spleen_56.nii.gz","label":"./labelsTr/spleen_56.nii.gz"},{"image":"./imagesTr/spleen_60.nii.gz","label":"./labelsTr/spleen_60.nii.gz"},{"image":"./imagesTr/spleen_2.nii.gz","label":"./labelsTr/spleen_2.nii.gz"},{"image":"./imagesTr/spleen_53.nii.gz","label":"./labelsTr/spleen_53.nii.gz"},{"image":"./imagesTr/spleen_41.nii.gz","label":"./labelsTr/spleen_41.nii.gz"},{"image":"./imagesTr/spleen_22.nii.gz","label":"./labelsTr/spleen_22.nii.gz"},{"image":"./imagesTr/spleen_14.nii.gz","label":"./labelsTr/spleen_14.nii.gz"},{"image":"./imagesTr/spleen_18.nii.gz","label":"./labelsTr/spleen_18.nii.gz"},{"image":"./imagesTr/spleen_20.nii.gz","label":"./labelsTr/spleen_20.nii.gz"},{"image":"./imagesTr/spleen_32.nii.gz","label":"./labelsTr/spleen_32.nii.gz"},{"image":"./imagesTr/spleen_16.nii.gz","label":"./labelsTr/spleen_16.nii.gz"},{"image":"./imagesTr/spleen_12.nii.gz","label":"./labelsTr/spleen_12.nii.gz"},{"image":"./imagesTr/spleen_63.nii.gz","label":"./labelsTr/spleen_63.nii.gz"},{"image":"./imagesTr/spleen_28.nii.gz","label":"./labelsTr/spleen_28.nii.gz"},{"image":"./imagesTr/spleen_24.nii.gz","label":"./labelsTr/spleen_24.nii.gz"},{"image":"./imagesTr/spleen_59.nii.gz","label":"./labelsTr/spleen_59.nii.gz"},{"image":"./imagesTr/spleen_47.nii.gz","label":"./labelsTr/spleen_47.nii.gz"},{"image":"./imagesTr/spleen_8.nii.gz","label":"./labelsTr/spleen_8.nii.gz"},{"image":"./imagesTr/spleen_6.nii.gz","label":"./labelsTr/spleen_6.nii.gz"},{"image":"./imagesTr/spleen_61.nii.gz","label":"./labelsTr/spleen_61.nii.gz"},{"image":"./imagesTr/spleen_10.nii.gz","label":"./labelsTr/spleen_10.nii.gz"},{"image":"./imagesTr/spleen_38.nii.gz","label":"./labelsTr/spleen_38.nii.gz"},{"image":"./imagesTr/spleen_45.nii.gz","label":"./labelsTr/spleen_45.nii.gz"},{"image":"./imagesTr/spleen_26.nii.gz","label":"./labelsTr/spleen_26.nii.gz"},{"image":"./imagesTr/spleen_49.nii.gz","label":"./labelsTr/spleen_49.nii.gz"}],"test":["./imagesTs/spleen_15.nii.gz","./imagesTs/spleen_23.nii.gz","./imagesTs/spleen_1.nii.gz","./imagesTs/spleen_42.nii.gz","./imagesTs/spleen_50.nii.gz","./imagesTs/spleen_54.nii.gz","./imagesTs/spleen_37.nii.gz","./imagesTs/spleen_58.nii.gz","./imagesTs/spleen_39.nii.gz","./imagesTs/spleen_48.nii.gz","./imagesTs/spleen_35.nii.gz","./imagesTs/spleen_11.nii.gz","./imagesTs/spleen_7.nii.gz","./imagesTs/spleen_30.nii.gz","./imagesTs/spleen_43.nii.gz","./imagesTs/spleen_51.nii.gz","./imagesTs/spleen_36.nii.gz","./imagesTs/spleen_55.nii.gz","./imagesTs/spleen_57.nii.gz","./imagesTs/spleen_34.nii.gz"]}
+                   </div>
+                </div>
+                <div class="text-right mrg-top-30">
+                <button class="btn btn-primary">Save</button>
+                </div>
+            </form>
+
+            </div>
+        </div>
+        </div>
+        </div>
+    </div>
+
+    <script>
+        $( document ).ready(function() {
+            var editor = ace.edit("editor");
+            editor.setTheme("ace/theme/tomorrow_night_eighties");
+            editor.session.setMode("ace/mode/json");
+            editor.session.setTabSize(2);
+            //editor.session.setUseSoftTabs(false);
+
+            formatted = JSON.stringify(JSON.parse(editor.session.getValue()), null, 2);
+            editor.session.setValue(formatted);
+
+            //editor.session.setValue(js_beautify(editor.session.getValue(), {indent_size : 2}));
+            //ace.require("ace/ext/beautify").beautify(editor.session);
+        });
+    </script>
+{% endblock content %}
